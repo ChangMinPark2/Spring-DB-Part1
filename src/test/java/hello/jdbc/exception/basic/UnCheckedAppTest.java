@@ -13,7 +13,7 @@ public class UnCheckedAppTest {
     @Test
     void unchecked() {
         Controller controller = new Controller();
-        assertThatThrownBy(() -> controller.request())
+        assertThatThrownBy(controller::request)
                 .isInstanceOf(Exception.class);
     }
 
